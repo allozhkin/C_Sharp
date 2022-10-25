@@ -8,7 +8,7 @@ void FillMatrix(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i,j] = random.Next(0, 9);
+            array[i, j] = random.Next(0, 9);
         }
     }
 }
@@ -18,19 +18,19 @@ void PrintMatrix(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i,j]} ");
+            Console.Write($"{array[i, j]} ");
         }
-    Console.WriteLine();
+        Console.WriteLine();
     }
 }
-int[,] ChangeMatrix (int[,] array)
+int[,] ChangeMatrix(int[,] array)
 {
-    int[,] newArray = new int [array.GetLength(0), array.GetLength(1)];
+    int[,] newArray = new int[array.GetLength(0), array.GetLength(1)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            newArray[i,j] = array[j,i];
+            newArray[i, j] = array[j, i];
         }
     }
     return newArray;
@@ -41,8 +41,8 @@ Console.WriteLine("Введите колличество столбцов: ");
 int column = int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine();
 
-int[,] array = new int [row, column];
-int[,] changedArray = new int [row, column];
+int[,] array = new int[row, column];
+int[,] changedArray = new int[row, column];
 FillMatrix(array);
 PrintMatrix(array);
 Console.WriteLine();
