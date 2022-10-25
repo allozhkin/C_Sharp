@@ -1,57 +1,52 @@
-﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-
-void Fillmassiv(int[,] massiv)
+﻿// Задайте две матрицы. Напишите программу, которая будет находить произведение двух матриц.
+void FillMatrix(int[,] matrix)
 {
     Random random = new Random();
-    for (int i = 0; i < massiv.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            massiv[i, j] = random.Next(0, 9);
+            matrix[i,j] = random.Next(0,9);
         }
     }
 }
-void PrintMassiv(int[,] massiv)
+void PrintMatrix(int[,] array)
 {
-    for (int i = 0; i < massiv.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{massiv[i, j]} ");
+            System.Console.Write($"{array[i, j]} ");
         }
-        Console.WriteLine();
+        System.Console.WriteLine();
     }
 }
-void ReorderMassiv(int[,] massiv)
+int[,] MultiplyMatrix(int[,] matrix1, int[,] matrix2)
 {
-    for (int i = 0; i < massiv.GetLength(0); i++)
+    int[,] product = new int[matrix1.GetLength(0), matrix1.GetLength(1)];
+    for (int i = 0; i < matrix1.GetLength(0); i++)
     {
-        for (int j = 0; j < massiv.GetLength(1); j++)
+        for (int j = 0; j < matrix2.GetLength(1); j++)
         {
-            for (int k = 0; k < massiv.GetLength(1); k++)
-            {
-                if (massiv[i, j] >= massiv[i,k])
-                {
-                    int temporary = massiv[i, j];
-                    massiv[i, j] = massiv[i, k];
-                    massiv[i, k] = temporary;
-                }
-            }
+            product[i, j] = matrix1[i, j] * matrix2[i, j];
         }
-
     }
+    return product;
 }
-
 Console.WriteLine("Введите количество строк: ");
-int row = int.Parse(Console.ReadLine() ?? "0");
+int row =int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine("Введите количество столбцов: ");
-int column = int.Parse(Console.ReadLine() ?? "0");
+int col = int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine();
-int[,] massiv = new int[row, column];
-Fillmassiv(massiv);
-PrintMassiv(massiv);
-Console.WriteLine();
+int[,] matrix1 = new int [row, col];
+int[,] matrix2 = new int [row, col];
+FillMatrix(matrix1);
+FillMatrix(matrix2);
 
-ReorderMassiv(massiv);
-Console.WriteLine("Упорядоченные по убыванию элементы каждой строки двумерного массива: ");
-PrintMassiv(massiv);
+PrintMatrix(matrix1);
+System.Console.WriteLine("---");
+PrintMatrix(matrix2);
+System.Console.WriteLine("---");
+
+int[,] multy = MultiplyMatrix(matrix1, matrix2);
+PrintMatrix(multy);
