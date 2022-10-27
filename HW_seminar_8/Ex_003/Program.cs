@@ -1,61 +1,51 @@
-﻿// 3. Сформировать трехмерный массив не повторяющимися двузначными числами показать его построчно на экран выводя индексы соответствующего элемента
+﻿// Сформировать трехмерный массив не повторяющимися двузначными числами показать его построчно на экран выводя индексы соответствующего элемента
 
-void FillMatrix(int[,,] matrix)
+void FillArray(int[,,] array)
 {
     Random random = new Random();
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            for (int k = 0; k < matrix.GetLength(2); k++)
+    int number = 10;
+    int num = -100;
+    for (int i = 0; i < array.GetLength(0); i++)
+        for (int j = 0; j < array.GetLength(1); j++)
+            for (int k = 0; k < array.GetLength(2); k++)
             {
-                matrix[i, j, k] = random.Next(10, 99);
-            }
-        }
-    }
-}
-void PrintMatrix(int[,,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-            {
-                Console.Write($"{matrix[i, j, k]} ");
-            }
-        }
-        Console.WriteLine();
-    }
-}
-void ChangeValue(int[,,] matrix)
-{
-    Random random = new Random();
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            for (int k = 0; k < matrix.GetLength(2); k++)
-            {
-                if (matrix[i, j, k] == matrix[i, j, k])
+                array[i, j, k] = random.Next(10, 99);
+                if (number >= 99 && num < -9)
                 {
-                    matrix[i, j, k] = new Random().Next(10, 99);
+                    array[i, j, k] = num++;
                 }
+                if (number >= 10 && number < 100)
+                {
+                    array[i, j, k] = number++;
+                }
+
             }
-        }
-    }
+
+
 }
 
-Console.WriteLine("Введите число: ");
-int num1 = int.Parse(Console.ReadLine() ?? "0");
-Console.WriteLine("Введите число: ");
-int num2 = int.Parse(Console.ReadLine() ?? "0");
-Console.WriteLine("Введите число: ");
-int num3 = int.Parse(Console.ReadLine() ?? "0");
-Console.WriteLine();
-int[,,] array = new int[num1, num2, num3];
-FillMatrix(array);
-PrintMatrix(array);
-ChangeValue(array);
-Console.WriteLine();
-PrintMatrix(array);
+void PrintArray(int[,,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int k = 0; k < array.GetLength(2); k++)
+            {
+                Console.Write($"{array[i, j, k]} ({i}, {j}, {k}) ");
+
+            }
+            Console.WriteLine();
+        }
+
+    }
+}
+System.Console.WriteLine("Введите число: ");
+int digit1 = int.Parse(Console.ReadLine() ?? "0");
+System.Console.WriteLine("Введите число: ");
+int digit2 = int.Parse(Console.ReadLine() ?? "0");
+System.Console.WriteLine("ВВедите число: ");
+int digit3 = int.Parse(Console.ReadLine() ?? "0");
+int[,,] Array = new int[digit1, digit2, digit3];
+FillArray(Array);
+PrintArray(Array);
