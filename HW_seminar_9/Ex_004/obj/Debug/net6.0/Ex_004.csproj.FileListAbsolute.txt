@@ -1,0 +1,15 @@
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\bin\Debug\net6.0\Ex_004.exe
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\bin\Debug\net6.0\Ex_004.deps.json
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\bin\Debug\net6.0\Ex_004.runtimeconfig.json
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\bin\Debug\net6.0\Ex_004.dll
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\bin\Debug\net6.0\Ex_004.pdb
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.csproj.AssemblyReference.cache
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.GeneratedMSBuildEditorConfig.editorconfig
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.AssemblyInfoInputs.cache
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.AssemblyInfo.cs
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.csproj.CoreCompileInputs.cache
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.dll
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\refint\Ex_004.dll
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.pdb
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\Ex_004.genruntimeconfig.cache
+D:\Алексей\Учёба\C_Sharp\HW_seminar_9\Ex_004\obj\Debug\net6.0\ref\Ex_004.dll
